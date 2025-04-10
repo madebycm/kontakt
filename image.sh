@@ -66,120 +66,224 @@ find "$SOURCE_DIR" -name "*.xml" -type f | while IFS= read -r source_file; do
     # Create marker file to indicate this directory was created by the script
     echo "Created by findMissingLibraries.sh on $(date)" > "$USER_DIR/$base_name/$MARKER_FILE"
     
-    # Select a high-quality gradient preset
-    # 1: Green to Black (like example)
-    # 2: Blue to Purple
-    # 3: Orange to Red
-    # 4: Teal to Blue
-    gradient_type=$((1 + RANDOM % 4))
+    # Select one of 30 high-quality gradient presets
+    gradient_type=$((1 + RANDOM % 30))
     
     case $gradient_type in
       1)
-        # Green to Black like example
+        # Deep Blue to Teal
         $IMAGEMAGICK_CMD -size 134x66 \
-          gradient:"#00FF00"-"#000000" \
-          -brightness-contrast 0x20 \
-          -blur 0x0.5 \
+          gradient:"#0F2027"-"#2C5364" \
+          -brightness-contrast 0x10 \
           "$USER_DIR/$base_name/MST_artwork.png"
         ;;
       2)
-        # Blue to Purple
+        # Sunset Orange to Purple
         $IMAGEMAGICK_CMD -size 134x66 \
-          gradient:"#0055FF"-"#5500FF" \
-          -brightness-contrast 0x20 \
-          -blur 0x0.5 \
+          gradient:"#FF512F"-"#DD2476" \
+          -brightness-contrast 0x10 \
           "$USER_DIR/$base_name/MST_artwork.png"
         ;;
       3)
-        # Orange to Red
+        # Smooth Midnight Blue
         $IMAGEMAGICK_CMD -size 134x66 \
-          gradient:"#FF9500"-"#FF0000" \
-          -brightness-contrast 0x20 \
-          -blur 0x0.5 \
+          gradient:"#141E30"-"#243B55" \
+          -brightness-contrast 0x10 \
           "$USER_DIR/$base_name/MST_artwork.png"
         ;;
       4)
-        # Teal to Blue
+        # Clean Emerald Green
         $IMAGEMAGICK_CMD -size 134x66 \
-          gradient:"#00DDDD"-"#0000AA" \
-          -brightness-contrast 0x20 \
-          -blur 0x0.5 \
+          gradient:"#134E5E"-"#71B280" \
+          -brightness-contrast 0x10 \
+          "$USER_DIR/$base_name/MST_artwork.png"
+        ;;
+      5)
+        # Subtle Violet
+        $IMAGEMAGICK_CMD -size 134x66 \
+          gradient:"#6A3093"-"#A044FF" \
+          -brightness-contrast 0x10 \
+          "$USER_DIR/$base_name/MST_artwork.png"
+        ;;
+      6)
+        # Deep Space Blue
+        $IMAGEMAGICK_CMD -size 134x66 \
+          gradient:"#000428"-"#004e92" \
+          -brightness-contrast 0x10 \
+          "$USER_DIR/$base_name/MST_artwork.png"
+        ;;
+      7)
+        # Royal Purple
+        $IMAGEMAGICK_CMD -size 134x66 \
+          gradient:"#4568DC"-"#B06AB3" \
+          -brightness-contrast 0x10 \
+          "$USER_DIR/$base_name/MST_artwork.png"
+        ;;
+      8)
+        # Elegant Crimson
+        $IMAGEMAGICK_CMD -size 134x66 \
+          gradient:"#3A1C71"-"#D76D77" \
+          -brightness-contrast 0x10 \
+          "$USER_DIR/$base_name/MST_artwork.png"
+        ;;
+      9)
+        # Ocean Blue
+        $IMAGEMAGICK_CMD -size 134x66 \
+          gradient:"#1A2980"-"#26D0CE" \
+          -brightness-contrast 0x10 \
+          "$USER_DIR/$base_name/MST_artwork.png"
+        ;;
+      10)
+        # Forest Green
+        $IMAGEMAGICK_CMD -size 134x66 \
+          gradient:"#134E5E"-"#71B280" \
+          -brightness-contrast 0x10 \
+          "$USER_DIR/$base_name/MST_artwork.png"
+        ;;
+      11)
+        # Modern Indigo
+        $IMAGEMAGICK_CMD -size 134x66 \
+          gradient:"#0B486B"-"#F56217" \
+          -brightness-contrast 0x10 \
+          "$USER_DIR/$base_name/MST_artwork.png"
+        ;;
+      12)
+        # Night Sky Purple
+        $IMAGEMAGICK_CMD -size 134x66 \
+          gradient:"#2B32B2"-"#1488CC" \
+          -brightness-contrast 0x10 \
+          "$USER_DIR/$base_name/MST_artwork.png"
+        ;;
+      13)
+        # Soft Coral
+        $IMAGEMAGICK_CMD -size 134x66 \
+          gradient:"#EE9CA7"-"#FFDDE1" \
+          -brightness-contrast 0x10 \
+          "$USER_DIR/$base_name/MST_artwork.png"
+        ;;
+      14)
+        # Deep Slate
+        $IMAGEMAGICK_CMD -size 134x66 \
+          gradient:"#304352"-"#485563" \
+          -brightness-contrast 0x10 \
+          "$USER_DIR/$base_name/MST_artwork.png"
+        ;;
+      15)
+        # Vibrant Raspberry
+        $IMAGEMAGICK_CMD -size 134x66 \
+          gradient:"#8E2DE2"-"#4A00E0" \
+          -brightness-contrast 0x10 \
+          "$USER_DIR/$base_name/MST_artwork.png"
+        ;;
+      16)
+        # Cinematic Blue
+        $IMAGEMAGICK_CMD -size 134x66 \
+          gradient:"#1E3C72"-"#2A5298" \
+          -brightness-contrast 0x10 \
+          "$USER_DIR/$base_name/MST_artwork.png"
+        ;;
+      17)
+        # Amber Sunrise
+        $IMAGEMAGICK_CMD -size 134x66 \
+          gradient:"#FF512F"-"#F09819" \
+          -brightness-contrast 0x10 \
+          "$USER_DIR/$base_name/MST_artwork.png"
+        ;;
+      18)
+        # Deep Aqua
+        $IMAGEMAGICK_CMD -size 134x66 \
+          gradient:"#1A2980"-"#26D0CE" \
+          -brightness-contrast 0x10 \
+          "$USER_DIR/$base_name/MST_artwork.png"
+        ;;
+      19)
+        # Muted Plum
+        $IMAGEMAGICK_CMD -size 134x66 \
+          gradient:"#614385"-"#516395" \
+          -brightness-contrast 0x10 \
+          "$USER_DIR/$base_name/MST_artwork.png"
+        ;;
+      20)
+        # Electric Violet
+        $IMAGEMAGICK_CMD -size 134x66 \
+          gradient:"#4776E6"-"#8E54E9" \
+          -brightness-contrast 0x10 \
+          "$USER_DIR/$base_name/MST_artwork.png"
+        ;;
+      21)
+        # Twilight Blue
+        $IMAGEMAGICK_CMD -size 134x66 \
+          gradient:"#0F2027"-"#203A43" \
+          -brightness-contrast 0x10 \
+          "$USER_DIR/$base_name/MST_artwork.png"
+        ;;
+      22)
+        # Soft Peach
+        $IMAGEMAGICK_CMD -size 134x66 \
+          gradient:"#FFC371"-"#FF5F6D" \
+          -brightness-contrast 0x10 \
+          "$USER_DIR/$base_name/MST_artwork.png"
+        ;;
+      23)
+        # Midnight Slate
+        $IMAGEMAGICK_CMD -size 134x66 \
+          gradient:"#283048"-"#859398" \
+          -brightness-contrast 0x10 \
+          "$USER_DIR/$base_name/MST_artwork.png"
+        ;;
+      24)
+        # Royal Blue
+        $IMAGEMAGICK_CMD -size 134x66 \
+          gradient:"#396afc"-"#2948ff" \
+          -brightness-contrast 0x10 \
+          "$USER_DIR/$base_name/MST_artwork.png"
+        ;;
+      25)
+        # Deep Mahogany
+        $IMAGEMAGICK_CMD -size 134x66 \
+          gradient:"#5A3F37"-"#2C7744" \
+          -brightness-contrast 0x10 \
+          "$USER_DIR/$base_name/MST_artwork.png"
+        ;;
+      26)
+        # Glacier Blue
+        $IMAGEMAGICK_CMD -size 134x66 \
+          gradient:"#00C9FF"-"#92FE9D" \
+          -brightness-contrast 0x10 \
+          "$USER_DIR/$base_name/MST_artwork.png"
+        ;;
+      27)
+        # Aurora Purple
+        $IMAGEMAGICK_CMD -size 134x66 \
+          gradient:"#3C1053"-"#AD5389" \
+          -brightness-contrast 0x10 \
+          "$USER_DIR/$base_name/MST_artwork.png"
+        ;;
+      28)
+        # Moody Cyan
+        $IMAGEMAGICK_CMD -size 134x66 \
+          gradient:"#003973"-"#E5E5BE" \
+          -brightness-contrast 0x10 \
+          "$USER_DIR/$base_name/MST_artwork.png"
+        ;;
+      29)
+        # Sleek Charcoal
+        $IMAGEMAGICK_CMD -size 134x66 \
+          gradient:"#232526"-"#414345" \
+          -brightness-contrast 0x10 \
+          "$USER_DIR/$base_name/MST_artwork.png"
+        ;;
+      30)
+        # Deep Cobalt
+        $IMAGEMAGICK_CMD -size 134x66 \
+          gradient:"#000046"-"#1CB5E0" \
+          -brightness-contrast 0x10 \
           "$USER_DIR/$base_name/MST_artwork.png"
         ;;
     esac
-    
-    # Determine font size based on text length to prevent cutoff
-    text_length=${#base_name}
-    font_size=15
-    
-    if [ "$text_length" -gt 20 ] && [ "$text_length" -le 30 ]; then
-      font_size=12
-    elif [ "$text_length" -gt 30 ]; then
-      font_size=10
-      
-      # For very long text, split into two lines
-      if [ "$text_length" -gt 40 ]; then
-        # Find a space near the middle to split
-        middle=$((text_length / 2))
-        
-        # Look for a space near the middle
-        for i in $(seq $middle 1 $text_length); do
-          if [ "${base_name:$i:1}" = " " ]; then
-            first_part="${base_name:0:$i}"
-            second_part="${base_name:$((i+1))}"
-            
-            # Add text with line break
-            $IMAGEMAGICK_CMD "$USER_DIR/$base_name/MST_artwork.png" \
-              -gravity center \
-              -font "Arial-Bold" \
-              -pointsize "$font_size" \
-              -fill black \
-              -annotate +0-3 "$first_part" \
-              -annotate +0+8 "$second_part" \
-              -blur 0x1 \
-              "$USER_DIR/$base_name/MST_artwork.png"
-            
-            $IMAGEMAGICK_CMD "$USER_DIR/$base_name/MST_artwork.png" \
-              -gravity center \
-              -font "Arial-Bold" \
-              -pointsize "$font_size" \
-              -fill "#C0FFC0" \
-              -annotate +0-4 "$first_part" \
-              -annotate +0+7 "$second_part" \
-              "$USER_DIR/$base_name/MST_artwork.png"
-            
-            break
-          fi
-        done
-        
-        echo "Created directory and artwork for: $base_name (with wrapped text)"
-        continue
-      fi
-    fi
-    
-    # Add text overlay with glow effect (for text that doesn't need splitting)
-    # First create a slightly blurred black text for a shadow/glow effect
-    $IMAGEMAGICK_CMD "$USER_DIR/$base_name/MST_artwork.png" \
-      -gravity center \
-      -font "Arial-Bold" \
-      -pointsize "$font_size" \
-      -fill black \
-      -annotate +0+1 "$base_name" \
-      -blur 0x1 \
-      "$USER_DIR/$base_name/MST_artwork.png"
-    
-    # Then overlay a sharper text on top
-    $IMAGEMAGICK_CMD "$USER_DIR/$base_name/MST_artwork.png" \
-      -gravity center \
-      -font "Arial-Bold" \
-      -pointsize "$font_size" \
-      -fill "#C0FFC0" \
-      -annotate +0+0 "$base_name" \
-      "$USER_DIR/$base_name/MST_artwork.png"
     
     echo "Created directory and artwork for: $base_name"
   fi
 done
 
 echo "Process completed!"
-echo "To undo these changes, run this script with the -reverse parameter"
